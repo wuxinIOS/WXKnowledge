@@ -8,12 +8,33 @@
 
 /**
  
+ Workspace：工作区
+ Index/Stage：暂存区，也叫索引
+ Repository：仓库区（或本地仓库），也存储库
+ Remote：远程仓库
+ 工作区: 通过git init创建的代码库的所有文件但是不包括.git文件(版本库)
+ 暂存区: 通过git add . 添加的修改,都是进入到暂存区了,肉眼不可见 通过 git status 可以看到修改的状态。
+ 
+ 
  //初始化仓库，添加文件到仓库以及提交文件到仓库
  $ git init --创建本地仓库
  $ git add . --把所有文件添加到仓库
  $ git commit -m "" --文件提交到仓库,-m 的后面输入的是本次提交的说明
  $ git status -- 查看文件的动态是否被修改
  $ git diff --查看文件被修改内容
+ 
+ 
+ 可以重新提交
+ 例如，提交后发现忘记了暂存某些需要的修改，可以像下面这样操作：
+  $ git commit -m 'initial commit'
+  $ git add forgotten_file
+  $ git commit --amend
+ 最终你只会有一个提交 - 第二次提交将代替第一次提交的结果。
+ 
+// 隐藏
+    现在，要切换分支以进行客户升级，但不想提交一直在做的工作; 那么可以把当前工作的改变隐藏起来。 要将一个新的存根推到堆栈上，运行 $ git stash 命令。
+    假设您已经解决了客户升级问题，想要重新开始新的功能的代码编写，查找上次没有写完成的代码，只需执行 $ git stash pop 命令即可从堆栈中删除更改并将其放置在当前工作目录中。
+ 
  
  //版本回退:
  
@@ -54,7 +75,7 @@
      
      场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
  
- 创建与合并分支:
+ // 创建与合并分支:
     
     $ git checkout -b 分支名 --创建了一个新的分支，并切换到了新的分支上，相当于以下两条命令：
          git branch dev
@@ -65,6 +86,8 @@
     $ git push origin --delete <branchName>删除远程分支
     $ git checkout 分支名 切换分支
     $ git push 推送到远程分支
+ 
+    $ git branch -m new_branch(oldName) wchar_support(newName) --重命名分支
  
  注意:
     一直提示有未提交的文件，发现UserInterfaceState.xcuserstate这个文件一直在自动更新，即使我的代码没改变，提交时也有它。后来百度到这是Xcode自带的文件，不应该被提交到版本管理中
