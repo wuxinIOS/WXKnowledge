@@ -94,4 +94,23 @@
     思路一: 利用字典，把数组里面的值座位 key-value 往字典里面添加。但是这样会打乱数组里面原本的顺序
     思路二:
  
+ 
+ 
+8. 获取UUID的代码
+ 
+ Class cls = NSClassFromString(@"UMANUtil");
+ SEL deviceIDSelector = @selector(openUDIDString);
+ NSString *deviceID = nil;
+ if(cls && [cls respondsToSelector:deviceIDSelector]){
+ deviceID = [cls performSelector:deviceIDSelector];
+ }
+ NSData* jsonData = [NSJSONSerialization dataWithJSONObject:@{@"oid" : deviceID}
+ options:NSJSONWritingPrettyPrinted
+ error:nil];
+ 
+ NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+ 
+
+ 
+
  */

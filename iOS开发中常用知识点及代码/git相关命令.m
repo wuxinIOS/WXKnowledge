@@ -19,9 +19,13 @@
  //初始化仓库，添加文件到仓库以及提交文件到仓库
  $ git init --创建本地仓库
  $ git add . --把所有文件添加到仓库
+ $ git add file --把修改过的文件添加到暂存区
  $ git commit -m "" --文件提交到仓库,-m 的后面输入的是本次提交的说明
+ $ git commit -m "" --把暂存区的的内容提交到当前所在的分支上去
  $ git status -- 查看文件的动态是否被修改
  $ git diff --查看文件被修改内容
+ $ git checkout --file 丢弃工作区的修改
+ $ git reset HEAD file 把暂存区的修改撤销，重新放回到工作区
  
  
  可以重新提交
@@ -33,7 +37,7 @@
  
 // 隐藏
     现在，要切换分支以进行客户升级，但不想提交一直在做的工作; 那么可以把当前工作的改变隐藏起来。 要将一个新的存根推到堆栈上，运行 $ git stash 命令。
-    假设您已经解决了客户升级问题，想要重新开始新的功能的代码编写，查找上次没有写完成的代码，只需执行 $ git stash pop 命令即可从堆栈中删除更改并将其放置在当前工作目录中。
+    假设您已经解决了客户升级问题，想要重新开始新的功能的代码编写，查找上次没有写完成的代码，只需执行 $ git stash pop 命令即可从堆栈中把stash内容也删了：并将其放置在当前工作目录中。
  
  
  //版本回退:
@@ -89,6 +93,12 @@
  
     $ git branch -m new_branch(oldName) wchar_support(newName) --重命名分支
  
+ 合并:
+    $ git merge 分支名 --命令用于合并指定分支到当前分支 是 快进模式 的合并方式
+ 
+    $ git merge --no-ff -m "merge with no-ff" dev  合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+ 
+ 
  注意:
     一直提示有未提交的文件，发现UserInterfaceState.xcuserstate这个文件一直在自动更新，即使我的代码没改变，提交时也有它。后来百度到这是Xcode自带的文件，不应该被提交到版本管理中
      
@@ -133,7 +143,31 @@
  git checkout -b branch_name tag_name
  这样会从 tag 创建一个分支，然后就和普通的 git 操作一样了。
  
+ 多人协作开发大概过程：
  
+     首先，可以试图用git push origin branch-name推送自己的修改；
+ 
+     如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+ 
+     如果合并有冲突，则解决冲突，并在本地提交；
+ 
+     没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+ 
+     如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
+ 
+ 
+ 注意：
+     查看远程库信息，使用git remote -v；
+ 
+     本地新建的分支如果不推送到远程，对其他人就是不可见的；
+ 
+     从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+ 
+     在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+ 
+     建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+ 
+     从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
  
  冲突:
     当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成
@@ -144,10 +178,5 @@
         2. git init --初始化了一个空的源。
         3. git add . --当前目录所有的内容就被添加到源里面去了。
         4. git commit -m "Initial commit" --提交到本地的仓底
- 
- 
- 
- 
- 
  
  */

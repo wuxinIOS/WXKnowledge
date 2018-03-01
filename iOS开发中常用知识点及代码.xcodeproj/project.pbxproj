@@ -59,10 +59,12 @@
 		181427711F45373B009590F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1818EC551F5658DB00BD3BD5 /* 账号两地登录.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "账号两地登录.m"; sourceTree = "<group>"; };
 		1818EC571F5698D000BD3BD5 /* 与推送通知相关.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "与推送通知相关.m"; sourceTree = "<group>"; };
+		183484F41FF5D56B00165F29 /* UITableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableView.h; sourceTree = "<group>"; };
 		18458B301FA068A40022D553 /* 画虚线圆角.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "画虚线圆角.h"; sourceTree = "<group>"; };
 		18474C4A1F467A8E00CCE53F /* 冷门知识.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "冷门知识.m"; sourceTree = "<group>"; };
 		184C50E71FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猴子搬来的救兵Git思维导图.jpg"; sourceTree = "<group>"; };
 		184C50E91FA2C7A300530181 /* 支付宝相关.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "支付宝相关.h"; sourceTree = "<group>"; };
+		18557F8C204556C90003DD31 /* 二维码生成.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "二维码生成.h"; sourceTree = "<group>"; };
 		1862753A1F4E664500B4DC81 /* git相关命令.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "git相关命令.m"; sourceTree = "<group>"; };
 		18A001671F53AE7500F1EEA2 /* scrollView相关知识.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "scrollView相关知识.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,10 +130,12 @@
 				1862753A1F4E664500B4DC81 /* git相关命令.m */,
 				184C50E71FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg */,
 				18A001671F53AE7500F1EEA2 /* scrollView相关知识.m */,
+				183484F41FF5D56B00165F29 /* UITableView.h */,
 				1818EC551F5658DB00BD3BD5 /* 账号两地登录.m */,
 				1818EC571F5698D000BD3BD5 /* 与推送通知相关.m */,
 				18458B301FA068A40022D553 /* 画虚线圆角.h */,
 				184C50E91FA2C7A300530181 /* 支付宝相关.h */,
+				18557F8C204556C90003DD31 /* 二维码生成.h */,
 			);
 			path = "iOS开发中常用知识点及代码";
 			sourceTree = "<group>";
