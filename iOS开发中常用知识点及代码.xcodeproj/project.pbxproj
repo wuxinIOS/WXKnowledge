@@ -19,7 +19,9 @@
 		1818EC581F5698D000BD3BD5 /* 与推送通知相关.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EC571F5698D000BD3BD5 /* 与推送通知相关.m */; };
 		18474C4B1F467A8E00CCE53F /* 冷门知识.m in Sources */ = {isa = PBXBuildFile; fileRef = 18474C4A1F467A8E00CCE53F /* 冷门知识.m */; };
 		184C50E81FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184C50E71FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg */; };
+		1854F16D204CF54E0097EC0A /* 文件的三个区.png in Resources */ = {isa = PBXBuildFile; fileRef = 1854F16C204CF54D0097EC0A /* 文件的三个区.png */; };
 		1862753B1F4E664500B4DC81 /* git相关命令.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862753A1F4E664500B4DC81 /* git相关命令.m */; };
+		187C3667204E805800BD5953 /* 文件的生命周期.png in Resources */ = {isa = PBXBuildFile; fileRef = 187C3666204E805800BD5953 /* 文件的生命周期.png */; };
 		18A001681F53AE7500F1EEA2 /* scrollView相关知识.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A001671F53AE7500F1EEA2 /* scrollView相关知识.m */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +66,13 @@
 		18474C4A1F467A8E00CCE53F /* 冷门知识.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "冷门知识.m"; sourceTree = "<group>"; };
 		184C50E71FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猴子搬来的救兵Git思维导图.jpg"; sourceTree = "<group>"; };
 		184C50E91FA2C7A300530181 /* 支付宝相关.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "支付宝相关.h"; sourceTree = "<group>"; };
+		1854F166204CF2990097EC0A /* ProGit学习笔记.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProGit学习笔记.h"; sourceTree = "<group>"; };
+		1854F16C204CF54D0097EC0A /* 文件的三个区.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文件的三个区.png"; sourceTree = "<group>"; };
+		1854F16E204CF5900097EC0A /* 1起步.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "1起步.h"; sourceTree = "<group>"; };
+		1854F170204D372F0097EC0A /* 2.git基础.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "2.git基础.h"; sourceTree = "<group>"; };
 		18557F8C204556C90003DD31 /* 二维码生成.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "二维码生成.h"; sourceTree = "<group>"; };
 		1862753A1F4E664500B4DC81 /* git相关命令.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "git相关命令.m"; sourceTree = "<group>"; };
+		187C3666204E805800BD5953 /* 文件的生命周期.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文件的生命周期.png"; sourceTree = "<group>"; };
 		18A001671F53AE7500F1EEA2 /* scrollView相关知识.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "scrollView相关知识.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,8 +133,10 @@
 				181427581F45373B009590F2 /* LaunchScreen.storyboard */,
 				1814275B1F45373B009590F2 /* Info.plist */,
 				1814274A1F45373B009590F2 /* Supporting Files */,
+				1854F16A204CF54D0097EC0A /* ProGit笔记 */,
 				18474C4A1F467A8E00CCE53F /* 冷门知识.m */,
 				1862753A1F4E664500B4DC81 /* git相关命令.m */,
+				1854F166204CF2990097EC0A /* ProGit学习笔记.h */,
 				184C50E71FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg */,
 				18A001671F53AE7500F1EEA2 /* scrollView相关知识.m */,
 				183484F41FF5D56B00165F29 /* UITableView.h */,
@@ -164,6 +173,33 @@
 				181427711F45373B009590F2 /* Info.plist */,
 			);
 			path = "iOS开发中常用知识点及代码UITests";
+			sourceTree = "<group>";
+		};
+		1854F16A204CF54D0097EC0A /* ProGit笔记 */ = {
+			isa = PBXGroup;
+			children = (
+				1854F16B204CF54D0097EC0A /* 1起步 */,
+				1854F16F204D37020097EC0A /* 2.基础 */,
+			);
+			path = "ProGit笔记";
+			sourceTree = "<group>";
+		};
+		1854F16B204CF54D0097EC0A /* 1起步 */ = {
+			isa = PBXGroup;
+			children = (
+				1854F16E204CF5900097EC0A /* 1起步.h */,
+				1854F16C204CF54D0097EC0A /* 文件的三个区.png */,
+			);
+			path = "1起步";
+			sourceTree = "<group>";
+		};
+		1854F16F204D37020097EC0A /* 2.基础 */ = {
+			isa = PBXGroup;
+			children = (
+				187C3666204E805800BD5953 /* 文件的生命周期.png */,
+				1854F170204D372F0097EC0A /* 2.git基础.h */,
+			);
+			path = "2.基础";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +313,8 @@
 			files = (
 				1814275A1F45373B009590F2 /* LaunchScreen.storyboard in Resources */,
 				181427571F45373B009590F2 /* Assets.xcassets in Resources */,
+				187C3667204E805800BD5953 /* 文件的生命周期.png in Resources */,
+				1854F16D204CF54E0097EC0A /* 文件的三个区.png in Resources */,
 				181427551F45373B009590F2 /* Main.storyboard in Resources */,
 				184C50E81FA2C32A00530181 /* 猴子搬来的救兵Git思维导图.jpg in Resources */,
 			);
